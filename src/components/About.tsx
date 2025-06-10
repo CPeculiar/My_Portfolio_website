@@ -2,6 +2,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Download } from 'lucide-react';
+import IMG from '/dp.jpg';
 
 const About = () => {
   const handleDownloadCV = () => {
@@ -39,7 +40,7 @@ const About = () => {
               <CardContent className="p-0">
                 <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center relative overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=400&fit=crop&crop=face"
+                    src={IMG}
                     alt="Peculiar Chukwudi"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />

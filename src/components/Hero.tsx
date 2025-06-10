@@ -29,13 +29,14 @@ const Hero = () => {
         
         <div className="mb-6 sm:mb-8">
           <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold mb-3 sm:mb-4 px-2">
-            <span className="text-primary">Frontend</span> & <span className="text-accent">Backend</span> Developer
+            <span className="text-primary">Fullstack</span> Developer
           </p>
           <div className="flex flex-wrap justify-center gap-1 sm:gap-2 mb-4 sm:mb-6 px-4">
             <span className="skill-tag text-xs sm:text-sm">React</span>
             <span className="skill-tag text-xs sm:text-sm">TypeScript</span>
             <span className="skill-tag text-xs sm:text-sm">Node.js</span>
-            <span className="skill-tag text-xs sm:text-sm">Tailwind CSS</span>
+            <span className="skill-tag text-xs sm:text-sm">Django</span>
+            <span className="skill-tag text-xs sm:text-sm">PostgreSQL</span>
           </div>
         </div>
         

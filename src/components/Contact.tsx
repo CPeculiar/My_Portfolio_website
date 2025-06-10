@@ -4,13 +4,32 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useState } from 'react';
+import emailjs from "emailjs-com";
+
+  interface EmailConfig {
+  serviceId: string | undefined;
+  templateId: string | undefined;
+  publicKey: string | undefined;
+  toEmail: string | undefined;
+}
+
+const emailConfig: EmailConfig = {
+  serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+  publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+  toEmail: import.meta.env.VITE_TO_EMAIL
+};
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
+    phone: '',
     email: '',
     message: ''
   });
+
+   const [isSubmitting, setIsSubmitting] = useState(false);
+   const [formErrors, setFormErrors] = useState({});
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -20,36 +39,74 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // You can integrate with a form service or backend here
+    setIsSubmitting(true);
+    setFormErrors({});
+    
+     if (!emailConfig.serviceId || !emailConfig.templateId || !emailConfig.publicKey) {
+      console.error('EmailJS configuration is missing. Please check your environment variables.');
+      alert('Configuration error. Please contact the administrator.');
+      setIsSubmitting(false);
+      return;
+    }
+
+      try {
+       const response = await emailjs.send(
+        emailConfig.serviceId,
+        emailConfig.templateId,
+        {
+          to_email: emailConfig.toEmail,
+          from_name: formData.name,
+          from_phone: formData.phone,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        emailConfig.publicKey
+      );
+
+       if (response.status === 200) {
+      alert('Thank you for your message! I will get back to you shortly.');
+      
+      setFormData({ name: '', phone: '', email: '', message: '' });
+      setIsSubmitting(false);
+      console.log('Contact form submitted successfully');
+         } else {
+        alert("Failed to send message. Please try again.");
+        setIsSubmitting(false);
+      }
+    } catch (error) {
+      console.error('Error submitting contact form:', error);
+      alert('Error submitting contact form. Please try again.');
+      setFormErrors({ form: `Form submission failed: ${(error as Error).message}` });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
     {
       title: "Email",
-      value: "peculiar.chukwudi@email.com",
-      href: "mailto:peculiar.chukwudi@email.com",
+      value: "chukwudipeculiar@gmail.com",
+      href: "mailto:chukwudipeculiar@gmail.com",
       color: "text-blue-400"
     },
     {
       title: "Phone",
-      value: "+234 123 456 7890",
-      href: "tel:+2341234567890",
+      value: "+234 706 564 9583",
+      href: "tel:+2347065649583",
       color: "text-green-400"
     },
     {
       title: "LinkedIn",
       value: "linkedin.com/in/peculiar-chukwudi",
-      href: "https://linkedin.com/in/peculiar-chukwudi",
+      href: "https://ng.linkedin.com/in/peculiar-chukwudi-a55602202",
       color: "text-purple-400"
     },
     {
       title: "GitHub",
       value: "github.com/peculiar-chukwudi",
-      href: "https://github.com/peculiar-chukwudi",
+      href: "https://github.com/CPeculiar",
       color: "text-orange-400"
     },
     {
@@ -97,6 +154,20 @@ const Contact = () => {
                     className="bg-background/50 border-border/50 focus:border-primary/50 transition-all duration-300 text-sm sm:text-base"
                   />
                 </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="phone" className="text-foreground text-sm sm:text-base">Phone Number</Label>
+                  <Input
+                    id="phone"
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    placeholder="Your phone number"
+                    required
+                    className="bg-background/50 border-border/50 focus:border-primary/50 transition-all duration-300 text-sm sm:text-base"
+                  />
+                </div>
                 
                 <div className="space-y-2">
                   <Label htmlFor="email" className="text-foreground text-sm sm:text-base">Email</Label>
@@ -125,8 +196,12 @@ const Contact = () => {
                   />
                 </div>
                 
-                <Button type="submit" className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 transition-all duration-300 hover:scale-105 text-sm sm:text-base py-3 sm:py-4">
-                  Send Message
+                <Button 
+                type="submit" 
+                className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 transition-all duration-300 hover:scale-105 text-sm sm:text-base py-3 sm:py-4"
+                disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </Button>
               </form>
             </CardContent>

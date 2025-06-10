@@ -6,8 +6,8 @@ const Skills = () => {
     {
       title: "Frontend Development",
       skills: [
-        "React", "TypeScript", "JavaScript", "HTML5", "CSS3",
-        "Tailwind CSS", "Next.js", "Vue.js", "Responsive Design"
+        "React", "TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3",
+        "Tailwind CSS", "Bootstrap CSS", "Next.js","Redux", "Responsive Design" 
       ],
       gradient: "from-blue-500/20 to-cyan-500/20",
       border: "border-blue-500/30",
@@ -17,8 +17,8 @@ const Skills = () => {
     {
       title: "Backend Development",
       skills: [
-        "Node.js", "Python", "Express.js", "REST APIs", "GraphQL",
-        "Database Design", "PostgreSQL", "MongoDB", "Firebase"
+        "Node.js", "Python", "Express.js", "REST APIs", "Django",
+        "Database Design", "PostgreSQL", "MongoDB", "Firebase", "Supabase",
       ],
       gradient: "from-purple-500/20 to-violet-500/20",
       border: "border-purple-500/30",
@@ -29,7 +29,7 @@ const Skills = () => {
       title: "Tools & Technologies",
       skills: [
         "Git", "Docker", "AWS", "Linux", "CI/CD",
-        "Jest", "Webpack", "Vite", "Figma"
+        "Jest", "Webpack", "Vite", "Figma", "Vercel", "Netlify"
       ],
       gradient: "from-orange-500/20 to-red-500/20",
       border: "border-orange-500/30",
@@ -40,7 +40,7 @@ const Skills = () => {
       title: "Soft Skills",
       skills: [
         "Problem Solving", "Team Collaboration", "Project Management",
-        "Communication", "Code Review", "Mentoring"
+        "Communication", "Code Review", "Mentoring", "Adaptability"
       ],
       gradient: "from-emerald-500/20 to-teal-500/20",
       border: "border-emerald-500/30",

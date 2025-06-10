@@ -1,57 +1,62 @@
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import FALATA from '/falata.png';
+import PORTFOLIO from '/portfolio.png';
+import INSURANCE from '/insurance.png';
+import Payment from '/payment.png';
+import HR from '/HR.png';
 
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features include user authentication, payment integration, and admin dashboard.",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe"],
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
+      title: "Leadership and Tech Academy Website", 
+      description: "A dynamic educational platform, designed for Future Leadership and Tech Academy, which features basic information about the Academy and an application form.",
+      technologies: ["React", "Typescript", "Firebase", "Tailwind CSS"],
+      image: FALATA,
       isPublic: true,
-      liveUrl: "https://example.com",
-      codeUrl: "https://github.com/peculiar/ecommerce"
+      liveUrl: "https://www.futureafricaleadandtech.org/",
+      codeUrl: "https://github.com/CPeculiar/Future-Africa-Leadership-and-Tech-Academy"
     },
     {
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, file sharing, and team collaboration features.",
-      technologies: ["Vue.js", "Firebase", "Socket.io"],
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
+      title: "Portfolio Website",
+      description: "A personal portfolio website showcasing my skills, projects, and experience. Built with React and Tailwind CSS.",
+      technologies: ["React", "Typescript", "Firebase", "Tailwind CSS"],
+      image: PORTFOLIO,
       isPublic: true,
-      liveUrl: "https://example.com",
-      codeUrl: "https://github.com/peculiar/taskmanager"
+      liveUrl: "https://github.com/CPeculiar/peculiar-portfolio-forge",
+      codeUrl: "https://peculiarchukwudi.vercel.app/"
     },
     {
-      title: "Internal Analytics Dashboard",
-      description: "A comprehensive analytics dashboard built for internal company use, featuring data visualization and reporting tools.",
-      technologies: ["React", "Python", "PostgreSQL", "D3.js"],
+      title: "HR Outsourcing Management System",
+      description: "A full-featured HR outsourcing management system designed to streamline employee outsourcing operations and for internal use with restricted access.",
+      technologies: ["React", "Python", "PostgreSQL", "Typescript"],
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
       isPublic: false,
       restrictedReason: "Internal company tool - restricted access"
     },
     {
-      title: "Employee Management System",
-      description: "A complete HR management system with employee tracking, payroll integration, and performance analytics.",
-      technologies: ["Angular", "Java", "MySQL"],
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
+      title: "HR Employee Management System",
+      description: "A complete HR management system with employee and events management, PayStack integration, etc.",
+      technologies: ["React", "Typescript", "Django", "PostgreSQL"],
+      image: HR,
       isPublic: false,
       restrictedReason: "Proprietary company software"
     },
     {
-      title: "Weather Forecast App",
-      description: "A beautiful weather application with location-based forecasts, interactive maps, and weather alerts.",
-      technologies: ["React Native", "OpenWeather API", "Redux"],
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop",
-      isPublic: true,
+      title: "Commercial Payment Solution",
+      description: "A comprehensive payment solution for commercial transactions, featuring secure payment processing.",
+      technologies: ["React", "Typescript", "Django", "PostgreSQL"],
+      image: Payment,
+      isPublic: false,
       liveUrl: "https://example.com",
       codeUrl: "https://github.com/peculiar/weather-app"
     },
     {
-      title: "Inventory Management Portal",
-      description: "A sophisticated inventory tracking system designed for warehouse operations and supply chain management.",
-      technologies: ["Laravel", "MySQL", "Vue.js"],
-      image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=600&h=400&fit=crop",
+      title: "Insurance Claims Portal",
+      description: "An insurance claims management portal that simplifies the claims process for users and administrators.",
+      technologies: ["React", "Typescript", "Redux", "Django"],
+      image: INSURANCE,
       isPublic: false,
       restrictedReason: "Client-specific solution"
     }
