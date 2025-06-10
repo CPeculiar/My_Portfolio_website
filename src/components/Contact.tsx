@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
+import { Phone } from 'lucide-react';
 import { useState } from 'react';
 
 const Contact = () => {
@@ -32,44 +33,62 @@ const Contact = () => {
     {
       title: "Email",
       value: "peculiar.chukwudi@email.com",
-      href: "mailto:peculiar.chukwudi@email.com"
+      href: "mailto:peculiar.chukwudi@email.com",
+      color: "text-blue-400"
+    },
+    {
+      title: "Phone",
+      value: "+234 123 456 7890",
+      href: "tel:+2341234567890",
+      color: "text-green-400"
     },
     {
       title: "LinkedIn",
       value: "linkedin.com/in/peculiar-chukwudi",
-      href: "https://linkedin.com/in/peculiar-chukwudi"
+      href: "https://linkedin.com/in/peculiar-chukwudi",
+      color: "text-purple-400"
     },
     {
       title: "GitHub",
       value: "github.com/peculiar-chukwudi",
-      href: "https://github.com/peculiar-chukwudi"
+      href: "https://github.com/peculiar-chukwudi",
+      color: "text-orange-400"
     },
     {
       title: "Location",
       value: "Available for Remote Work",
-      href: null
+      href: null,
+      color: "text-emerald-400"
     }
   ];
 
   return (
-    <section id="contact" className="py-20">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-20 relative overflow-hidden">
+      {/* Animated background */}
+      <div className="absolute inset-0">
+        <div className="absolute top-10 left-1/4 w-72 h-72 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-10 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 text-primary">Get In Touch</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <h2 className="text-5xl font-bold mb-6 animate-fade-in">
+            <span className="gradient-text">Get In Touch</span>
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in delay-200">
             Have a project in mind or want to collaborate? I'd love to hear from you!
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          <Card>
+          <Card className="card-glow hover:scale-105 transition-all duration-500 animate-fade-in">
             <CardHeader>
-              <CardTitle>Send me a message</CardTitle>
+              <CardTitle className="text-2xl gradient-text">Send me a message</CardTitle>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
-                  <Label htmlFor="name">Name</Label>
+                  <Label htmlFor="name" className="text-foreground">Name</Label>
                   <Input
                     id="name"
                     name="name"
@@ -77,11 +96,12 @@ const Contact = () => {
                     onChange={handleInputChange}
                     placeholder="Your name"
                     required
+                    className="bg-background/50 border-border/50 focus:border-primary/50 transition-all duration-300"
                   />
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
+                  <Label htmlFor="email" className="text-foreground">Email</Label>
                   <Input
                     id="email"
                     name="email"
@@ -90,11 +110,12 @@ const Contact = () => {
                     onChange={handleInputChange}
                     placeholder="your.email@example.com"
                     required
+                    className="bg-background/50 border-border/50 focus:border-primary/50 transition-all duration-300"
                   />
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="message">Message</Label>
+                  <Label htmlFor="message" className="text-foreground">Message</Label>
                   <textarea
                     id="message"
                     name="message"
@@ -102,11 +123,11 @@ const Contact = () => {
                     onChange={handleInputChange}
                     placeholder="Tell me about your project or just say hello!"
                     required
-                    className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                    className="flex min-h-[120px] w-full rounded-md border border-border/50 bg-background/50 px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm transition-all duration-300"
                   />
                 </div>
                 
-                <Button type="submit" className="w-full">
+                <Button type="submit" className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 transition-all duration-300 hover:scale-105">
                   Send Message
                 </Button>
               </form>
@@ -114,14 +135,14 @@ const Contact = () => {
           </Card>
 
           <div className="space-y-6">
-            <Card>
+            <Card className="card-glow hover:scale-105 transition-all duration-500 animate-fade-in delay-200">
               <CardHeader>
-                <CardTitle>Contact Information</CardTitle>
+                <CardTitle className="text-2xl gradient-text">Contact Information</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-6">
                 {contactInfo.map((info, index) => (
-                  <div key={index}>
-                    <div className="flex justify-between items-center">
+                  <div key={index} className="group">
+                    <div className="flex justify-between items-center p-3 rounded-lg bg-gradient-to-r from-background/50 to-background/30 border border-border/30 hover:border-border/60 transition-all duration-300 hover:scale-105">
                       <span className="font-medium text-sm text-muted-foreground">
                         {info.title}
                       </span>
@@ -130,23 +151,22 @@ const Contact = () => {
                           href={info.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-sm text-primary hover:underline"
+                          className={`text-sm hover:underline transition-colors duration-300 ${info.color} hover:brightness-125`}
                         >
                           {info.value}
                         </a>
                       ) : (
-                        <span className="text-sm">{info.value}</span>
+                        <span className={`text-sm ${info.color}`}>{info.value}</span>
                       )}
                     </div>
-                    {index < contactInfo.length - 1 && <Separator className="mt-4" />}
                   </div>
                 ))}
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="card-glow hover:scale-105 transition-all duration-500 animate-fade-in delay-300">
               <CardHeader>
-                <CardTitle>Let's Work Together</CardTitle>
+                <CardTitle className="text-2xl gradient-text">Let's Work Together</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground text-sm mb-4">
