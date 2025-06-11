@@ -60,6 +60,83 @@ const Projects = () => {
       image: INSURANCE,
       isPublic: false,
       restrictedReason: "Client-specific solution"
+    },
+    {
+      title: "E-Commerce Dashboard",
+      description: "A comprehensive e-commerce management dashboard with analytics, inventory management, and order processing capabilities.",
+      technologies: ["React", "Node.js", "MongoDB", "Express"],
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&h=300&fit=crop",
+      isPublic: true,
+      liveUrl: "https://example-ecommerce.com",
+      codeUrl: "https://github.com/peculiar/ecommerce-dashboard"
+    },
+    {
+      title: "Real Estate Platform",
+      description: "A modern real estate platform connecting buyers, sellers, and agents with advanced search and listing features.",
+      technologies: ["Vue.js", "Laravel", "MySQL", "Redis"],
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=300&fit=crop",
+      isPublic: true,
+      liveUrl: "https://example-realestate.com",
+      codeUrl: "https://github.com/peculiar/realestate-platform"
+    },
+    {
+      title: "Learning Management System",
+      description: "A comprehensive LMS platform for educational institutions with course management, student tracking, and assessment tools.",
+      technologies: ["Angular", "Django", "PostgreSQL", "Docker"],
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop",
+      isPublic: false,
+      restrictedReason: "Educational institution proprietary system"
+    },
+    {
+      title: "Healthcare Management System",
+      description: "A complete healthcare management solution for hospitals and clinics with patient records, appointment scheduling, and billing.",
+      technologies: ["React", "Spring Boot", "Oracle", "Microservices"],
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=500&h=300&fit=crop",
+      isPublic: false,
+      restrictedReason: "HIPAA compliant - healthcare data protection"
+    },
+    {
+      title: "Social Media Analytics Tool",
+      description: "An advanced social media analytics platform providing insights, engagement metrics, and campaign performance tracking.",
+      technologies: ["React", "Python", "Apache Kafka", "ElasticSearch"],
+      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=500&h=300&fit=crop",
+      isPublic: true,
+      liveUrl: "https://example-analytics.com",
+      codeUrl: "https://github.com/peculiar/social-analytics"
+    },
+    {
+      title: "Financial Trading Platform",
+      description: "A sophisticated trading platform with real-time market data, portfolio management, and algorithmic trading capabilities.",
+      technologies: ["React", "WebSocket", "Redis", "Docker"],
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&h=300&fit=crop",
+      isPublic: false,
+      restrictedReason: "Financial services - regulatory compliance required"
+    },
+    {
+      title: "Supply Chain Management",
+      description: "An enterprise supply chain management system with inventory tracking, vendor management, and logistics optimization.",
+      technologies: ["Angular", "ASP.NET Core", "SQL Server", "Azure"],
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=500&h=300&fit=crop",
+      isPublic: true,
+      liveUrl: "https://example-supply.com",
+      codeUrl: "https://github.com/peculiar/supply-chain"
+    },
+    {
+      title: "Restaurant Management System",
+      description: "A complete restaurant management solution with POS integration, inventory management, and customer loyalty programs.",
+      technologies: ["Vue.js", "Node.js", "MongoDB", "Stripe API"],
+      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=500&h=300&fit=crop",
+      isPublic: true,
+      liveUrl: "https://example-restaurant.com",
+      codeUrl: "https://github.com/peculiar/restaurant-management"
+    },
+    {
+      title: "Event Management Platform",
+      description: "A comprehensive event management platform with ticket sales, attendee management, and virtual event capabilities.",
+      technologies: ["React", "Django", "PostgreSQL", "AWS"],
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&h=300&fit=crop",
+      isPublic: false,
+      restrictedReason: "Client proprietary event management solution"
     }
   ];
 
