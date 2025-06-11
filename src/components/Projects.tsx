@@ -15,7 +15,7 @@ import Data from '/data.png';
 import Portal from '/cjportal.png';
 import Media from '/media.png';
 import Tech from '/tech.png';
-import WaitList from '/waitlist.png';
+import CCP from '/ccp.png';
 
 const Projects = () => {
   const projects = [
@@ -40,7 +40,7 @@ const Projects = () => {
     {
       title: "Outsourcing HR Management System",
       description: "A full-featured outsourcing HR management system designed to streamline employee outsourcing operations and for internal use with restricted access.",
-      technologies: ["React", "Python", "PostgreSQL", "Typescript"],
+      technologies: ["React", "Django", "PostgreSQL", "Typescript"],
       image: OUTSOURCE,
       isPublic: false,
       restrictedReason: "Internal company portal - restricted access"
@@ -115,7 +115,7 @@ const Projects = () => {
     {
       title: "CJ ART Company's Portal",
       description: "A consolidated portal for managing employee records, payroll, and performance reviews with secure access controls.",
-      technologies: ["React", "WebSocket", "Redis", "Docker"],
+      technologies: ["React", "JavaScript",  "Email JS", "Firebase"],
       image: Portal,
       isPublic: false,
       restrictedReason: "Proprietary enterprise software"
@@ -139,12 +139,12 @@ const Projects = () => {
       codeUrl: "https://github.com/CPeculiar/Tech-Academy"
     },
     {
-      title: "Wait-List Management System",
-      description: "A comprehensive tech bootcamp management platform featuring course sales, payment management with Paystack integration, and virtual event capabilities.",
-      technologies: ["React", "JavaScript",  "Email JS", "Firebase"],
-      image: WaitList,
+      title: "Consolidated Collection Portal",
+      description: "A centralized platform designed to manage internal collection processes efficiently with secure access controls.",
+      technologies: ["React", "Typescript", "Django", "PostgreSQL"],
+      image: CCP,
       isPublic: false,
-      restrictedReason: "Client proprietary event management solution"
+      restrictedReason: "For internal use only - restricted access"
     }
   ];
 
@@ -225,12 +225,12 @@ const Projects = () => {
                 )}
               </CardContent>
 
-              <CardFooter className="flex gap-2 p-4 sm:p-6 pt-0">
+                <CardFooter className="flex flex-col sm:flex-row gap-2 p-3 sm:p-4 lg:p-6 pt-0">
                 {project.isPublic ? (
                   <>
                     <Button
                       onClick={() => handleProjectClick(project)}
-                      className="flex-1 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 transition-all duration-300 hover:scale-105 text-xs sm:text-sm py-2 sm:py-3"
+                     className="w-full sm:flex-1 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 transition-all duration-300 hover:scale-105 text-xs sm:text-sm py-2 px-3 sm:py-3 h-8 sm:h-auto"
                     >
                       View Live
                     </Button>
@@ -238,7 +238,7 @@ const Projects = () => {
                       <Button
                         variant="outline"
                         onClick={() => handleCodeClick(project.codeUrl)}
-                        className="flex-1 border-primary/30 hover:border-primary/60 hover:bg-primary/10 transition-all duration-300 text-xs sm:text-sm py-2 sm:py-3"
+                       className="w-full sm:flex-1 border-primary/30 hover:border-primary/60 hover:bg-primary/10 transition-all duration-300 text-xs sm:text-sm py-2 px-3 sm:py-3 h-8 sm:h-auto"
                       >
                         View Code
                       </Button>
@@ -247,7 +247,7 @@ const Projects = () => {
                 ) : (
                   <Button
                     disabled
-                    className="flex-1 cursor-not-allowed opacity-50 text-xs sm:text-sm py-2 sm:py-3"
+                    className="w-full cursor-not-allowed opacity-50 text-xs sm:text-sm py-2 px-3 sm:py-3 h-8 sm:h-auto"
                     title={project.restrictedReason}
                   >
                     Restricted Access

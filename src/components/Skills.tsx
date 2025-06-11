@@ -194,11 +194,11 @@ const Skills = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent className="p-4 sm:p-6 pt-0">
-                <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2 items-center justify-center">
                   {category.skills.map((skill, skillIndex) => (
                     <span
                       key={skillIndex}
-                      className={`px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 hover:scale-105 ${category.textColor} border border-current/20 hover:border-current/40 hover:shadow-lg`}
+                      className={`px-2 sm:px-3 py-1 text-center rounded-full text-xs sm:text-sm font-medium transition-all duration-300 hover:scale-105 ${category.textColor} border border-current/20 hover:border-current/40 hover:shadow-lg`}
                       style={{
                         background: `linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)`,
                       }}
