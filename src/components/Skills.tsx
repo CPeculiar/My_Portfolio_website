@@ -6,8 +6,8 @@ const Skills = () => {
     {
       title: "Frontend Development",
       skills: [
-        "React", "TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3",
-        "Tailwind CSS", "Bootstrap CSS", "Next.js","Redux", "Responsive Design" 
+        "React", "Next.js", "JavaScript", "TypeScript",  "HTML5",
+         "CSS3", "Tailwind CSS", "Bootstrap", "Redux", "Redux Toolkit"
       ],
       gradient: "from-blue-500/20 to-cyan-500/20",
       border: "border-blue-500/30",
@@ -17,8 +17,8 @@ const Skills = () => {
     {
       title: "Backend Development",
       skills: [
-        "Node.js", "Python", "Express.js", "REST APIs", "Django",
-        "Database Design", "PostgreSQL", "MongoDB", "Firebase", "Supabase",
+        "Node.js", "Express.js", "Python", "Django", 
+         "REST APIs",  "Firebase", "Supabase",
       ],
       gradient: "from-purple-500/20 to-violet-500/20",
       border: "border-purple-500/30",
@@ -26,21 +26,131 @@ const Skills = () => {
       textColor: "text-purple-200"
     },
     {
+      title: "Mobile Development",
+      skills: [
+        "React Native", "Flutter", "Swift", "Kotlin", "Xamarin",
+        "Ionic", "Android SDK", "iOS SDK"
+      ],
+      gradient: "from-pink-500/20 to-rose-500/20",
+      border: "border-pink-500/30",
+      iconBg: "bg-pink-500/20",
+      textColor: "text-pink-200"
+    },
+    {
+      title: "Database Management",
+      skills: [
+        "PostgreSQL", "MongoDB", "MySQL", "Redis", "SQLite", 
+        "SQL", "NoSQL", "Firestore"
+      ],
+      gradient: "from-green-500/20 to-emerald-500/20",
+      border: "border-green-500/30",
+      iconBg: "bg-green-500/20",
+      textColor: "text-green-200"
+    },
+    {
+      title: "DevOps & Cloud",
+      skills: [
+        "Docker", "Kubernetes", "AWS", "Azure",
+          "Jenkins","GitHub Actions", "Terraform"
+      ],
+      gradient: "from-slate-500/20 to-gray-500/20",
+      border: "border-slate-500/30",
+      iconBg: "bg-slate-500/20",
+      textColor: "text-slate-200"
+    },
+    {
       title: "Tools & Technologies",
       skills: [
-        "Git", "Docker", "AWS", "Linux", "CI/CD",
-        "Jest", "Webpack", "Vite", "Figma", "Vercel", "Netlify"
+        "Git", "GitHub", "GitLab", "Docker",  "Linux", "Vite", 
+         "Webpack", "Vercel", "Netlify"
       ],
       gradient: "from-orange-500/20 to-red-500/20",
       border: "border-orange-500/30",
       iconBg: "bg-orange-500/20",
       textColor: "text-orange-200"
     },
-    {
-      title: "Soft Skills",
+     {
+      title: "Design & UI/UX",
       skills: [
-        "Problem Solving", "Team Collaboration", "Project Management",
-        "Communication", "Code Review", "Mentoring", "Adaptability"
+        "Figma", "Photoshop", "Illustrator",
+        "InVision", "Framer", "Canva"
+      ],
+      gradient: "from-fuchsia-500/20 to-pink-500/20",
+      border: "border-fuchsia-500/30",
+      iconBg: "bg-fuchsia-500/20",
+      textColor: "text-fuchsia-200"
+    },
+    {
+      title: "Creative & Content",
+      skills: [
+        "Video Editing", "Content Creation","Multimedia Production"
+      ],
+      gradient: "from-violet-500/20 to-purple-500/20",
+      border: "border-violet-500/30",
+      iconBg: "bg-violet-500/20",
+      textColor: "text-violet-200"
+    },
+     {
+      title: "Digital Marketing & Growth",
+      skills: [
+        "Digital Marketing", "Social Media Management", "Lead Generation", 
+         "Growth Hacking", "Brand Strategy", "Content Marketing"
+      ],
+      gradient: "from-yellow-500/20 to-amber-500/20",
+      border: "border-yellow-500/30",
+      iconBg: "bg-yellow-500/20",
+      textColor: "text-yellow-200"
+    },
+    {
+      title: "Business & Entrepreneurship",
+      skills: [
+        "Entrepreneurship", "Business Strategy", "Market Disruption",
+        "Innovation Leadership", "Business Development",
+        "Startup Operations"
+      ],
+      gradient: "from-teal-500/20 to-cyan-500/20",
+      border: "border-teal-500/30",
+      iconBg: "bg-teal-500/20",
+      textColor: "text-teal-200"
+    },
+    {
+      title: "Leadership & Communication",
+      skills: [
+        "Public Speaking", "Coaching & Mentoring", "Thought Leadership", 
+        "Community Building","Cross-functional Leadership"
+      ],
+      gradient: "from-lime-500/20 to-green-500/20",
+      border: "border-lime-500/30",
+      iconBg: "bg-lime-500/20",
+      textColor: "text-lime-200"
+    },
+    {
+      title: "Professional Services",
+      skills: [
+        "Virtual Assistant", "Executive Support", "Project Management",
+         "Process Optimization", "Remote Team Management", "Business Operations" 
+      ],
+      gradient: "from-sky-500/20 to-blue-500/20",
+      border: "border-sky-500/30",
+      iconBg: "bg-sky-500/20",
+      textColor: "text-sky-200"
+    },
+    {
+      title: "Personal & Artistic",
+      skills: [
+        "Spoken word artist", "Keyboardist", "Song writer",
+        "Creative Arts", "Musical Arrangement", "Live Performance"
+      ],
+      gradient: "from-rose-500/20 to-pink-500/20",
+      border: "border-rose-500/30",
+      iconBg: "bg-rose-500/20",
+      textColor: "text-rose-200"
+    },
+    {
+      title: "Core Professional Skills",
+      skills: [
+        "Problem Solving", "Team Collaboration", 
+        "Strategic Communication", "Code Review", "Technical Mentoring"
       ],
       gradient: "from-emerald-500/20 to-teal-500/20",
       border: "border-emerald-500/30",
