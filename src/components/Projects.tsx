@@ -6,6 +6,7 @@ import PORTFOLIO from '/portfolio.png';
 import INSURANCE from '/insurance.png';
 import Payment from '/payment.png';
 import HR from '/HR.png';
+import OUTSOURCE from '/outsource.png';
 
 const Projects = () => {
   const projects = [
@@ -24,14 +25,14 @@ const Projects = () => {
       technologies: ["React", "Typescript", "Firebase", "Tailwind CSS"],
       image: PORTFOLIO,
       isPublic: true,
-      liveUrl: "https://github.com/CPeculiar/peculiar-portfolio-forge",
-      codeUrl: "https://peculiarchukwudi.vercel.app/"
+      liveUrl: "https://peculiarchukwudi.vercel.app/",
+      codeUrl: "https://github.com/CPeculiar/peculiar-portfolio-forge"
     },
     {
-      title: "HR Outsourcing Management System",
-      description: "A full-featured HR outsourcing management system designed to streamline employee outsourcing operations and for internal use with restricted access.",
+      title: "Outsourcing HR Management System",
+      description: "A full-featured outsourcing HR management system designed to streamline employee outsourcing operations and for internal use with restricted access.",
       technologies: ["React", "Python", "PostgreSQL", "Typescript"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+      image: OUTSOURCE,
       isPublic: false,
       restrictedReason: "Internal company tool - restricted access"
     },
