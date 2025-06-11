@@ -8,7 +8,7 @@ const About = () => {
   const handleDownloadCV = () => {
     // Create a temporary link element to download the CV
     const link = document.createElement('a');
-    link.href = '/cv.pdf'; // This should be the path to your CV file in the public folder
+    link.href = '/Peculiar_Chukwudi_CV.pdf'; // This should be the path to your CV file in the public folder
     link.download = 'Peculiar_Chukwudi_CV.pdf'; // The filename for the downloaded file
     document.body.appendChild(link);
     link.click();
