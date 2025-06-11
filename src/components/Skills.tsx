@@ -1,54 +1,57 @@
 
 import { Card, CardContent } from '@/components/ui/card';
-import { Code2, Database, Globe, Smartphone, Server, GitBranch, Users, Lightbulb } from 'lucide-react';
+import { Code2, Database, Globe, Lightbulb } from 'lucide-react';
 
 const Skills = () => {
   const skillCategories = [
     {
-      name: "Frontend Development",
-      icon: Globe,
-      skills: ["React", "Next.js", "JavaScript", "TypeScript", "HTML", "CSS", "Tailwind CSS", "Redux", "Zustand"]
+      title: "Frontend Development",
+      skills: [
+        "React", "Next.js", "JavaScript (ES6+)", "TypeScript", "HTML5",
+        "CSS3", "Tailwind CSS", "Bootstrap CSS", "Redux"
+      ],
+      gradient: "from-blue-500/20 to-cyan-500/20",
+      border: "border-blue-500/30",
+      iconBg: "bg-blue-500/20",
+      textColor: "text-blue-200",
+      icon: Globe
     },
     {
-      name: "Backend Development",
-      icon: Server,
-      skills: ["Node.js", "Express.js", "Python", "Django", "RESTful APIs", "GraphQL", "gRPC"]
+      title: "Backend Development",
+      skills: [
+        "Node.js", "Python", "Express.js", "REST APIs", "Django",
+        "PostgreSQL", "MongoDB", "Firebase", "Supabase"
+      ],
+      gradient: "from-purple-500/20 to-violet-500/20",
+      border: "border-purple-500/30",
+      iconBg: "bg-purple-500/20",
+      textColor: "text-purple-200",
+      icon: Database
     },
     {
-      name: "Mobile Development",
-      icon: Smartphone,
-      skills: ["React Native", "Flutter", "Swift", "Kotlin"]
+      title: "Tools & Technologies",
+      skills: [
+        "Git", "GitHub", "GitLab", "Docker", "AWS", "Linux", "CI/CD",
+        "Jest", "Webpack", "Vite", "Figma", "Vercel", "Netlify"
+      ],
+      gradient: "from-orange-500/20 to-red-500/20",
+      border: "border-orange-500/30",
+      iconBg: "bg-orange-500/20",
+      textColor: "text-orange-200",
+      icon: Code2
     },
     {
-      name: "Databases",
-      icon: Database,
-      skills: ["PostgreSQL", "MySQL", "MongoDB", "Firebase", "SQL", "NoSQL"]
-    },
-    {
-      name: "Version Control",
-      icon: GitBranch,
-      skills: ["Git", "GitHub", "GitLab", "Bitbucket"]
-    },
-    {
-      name: "DevOps & Cloud",
-      icon: Users,
-      skills: ["Docker", "Kubernetes", "AWS", "Azure", "CI/CD", "Jenkins", "Terraform"]
-    },
-    {
-      name: "Other",
-      icon: Lightbulb,
-      skills: ["Data Structures", "Algorithms", "System Design", "Object-Oriented Programming", "Design Patterns"]
-    },
-    {
-      name: "Programming Languages",
-      icon: Code2,
-      skills: ["JavaScript", "TypeScript", "Python", "Java", "C++", "C#", "Go", "Rust"]
+      title: "Soft Skills",
+      skills: [
+        "Problem Solving", "Team Collaboration", "Project Management",
+        "Communication", "Code Review", "Mentoring", "Adaptability"
+      ],
+      gradient: "from-emerald-500/20 to-teal-500/20",
+      border: "border-emerald-500/30",
+      iconBg: "bg-emerald-500/20",
+      textColor: "text-emerald-200",
+      icon: Lightbulb
     }
-  ];
-
-  const softSkills = [
-    "Problem Solving", "Team Collaboration", "Communication", "Adaptability",
-    "Critical Thinking", "Leadership", "Time Management", "Creativity"
   ];
 
   return (
@@ -70,19 +73,25 @@ const Skills = () => {
         </div>
 
         {/* Technical Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {skillCategories.map((category, index) => (
-            <Card key={index} className="hover:shadow-2xl transition-all duration-500 flex flex-col group card-glow hover:scale-105 animate-fade-in border-border/50" style={{ animationDelay: `${index * 100}ms` }}>
+            <Card 
+              key={index} 
+              className={`hover:shadow-2xl transition-all duration-500 flex flex-col group card-glow hover:scale-105 animate-fade-in bg-gradient-to-br ${category.gradient} ${category.border} border`} 
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
               <CardContent className="p-4 sm:p-6">
                 <div className="flex items-center mb-3 sm:mb-4">
-                  <category.icon className="w-5 h-5 sm:w-6 sm:h-6 mr-2 text-primary" />
-                  <h3 className="text-lg sm:text-xl font-semibold gradient-text">{category.name}</h3>
+                  <div className={`p-2 rounded-lg ${category.iconBg} mr-3`}>
+                    <category.icon className={`w-5 h-5 sm:w-6 sm:h-6 ${category.textColor}`} />
+                  </div>
+                  <h3 className={`text-lg sm:text-xl font-semibold ${category.textColor}`}>{category.title}</h3>
                 </div>
                 <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {category.skills.map((skill, skillIndex) => (
                     <span
                       key={skillIndex}
-                      className="px-2 sm:px-3 py-1 bg-gradient-to-r from-primary/20 to-accent/20 text-primary rounded-full text-xs font-medium border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:scale-105"
+                      className={`px-2 sm:px-3 py-1 ${category.gradient} ${category.textColor} rounded-full text-xs font-medium ${category.border} border hover:scale-105 transition-all duration-300`}
                     >
                       {skill}
                     </span>
@@ -91,30 +100,6 @@ const Skills = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        {/* Soft Skills Section */}
-        <div className="mt-16 sm:mt-20">
-          <div className="text-center mb-8 sm:mb-12">
-            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 animate-fade-in">
-              <span className="gradient-text">Soft Skills</span>
-            </h3>
-            <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-lg mx-auto animate-fade-in delay-200 px-4">
-              Essential interpersonal and professional skills that complement my technical abilities
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto text-center">
-            {softSkills.map((skill, index) => (
-              <div
-                key={index}
-                className="skill-tag animate-fade-in"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                {skill}
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>
