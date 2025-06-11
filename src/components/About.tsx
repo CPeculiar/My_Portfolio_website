@@ -34,25 +34,8 @@ const About = () => {
           </p>
         </div>
 
-        {/* Mobile image display - shows only on small screens */}
-        <div className="lg:hidden mb-8 animate-fade-in">
-          <Card className="overflow-hidden card-glow hover:scale-105 transition-all duration-500 group max-w-sm mx-auto">
-            <CardContent className="p-0">
-              <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center relative overflow-hidden">
-                <img
-                  src={IMG}
-                  alt="Peculiar Chukwudi"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center max-w-6xl mx-auto">
-          {/* Desktop image - hidden on mobile */}
-          <div className="space-y-6 animate-fade-in order-2 lg:order-1 hidden lg:block">
+          <div className="space-y-6 animate-fade-in order-2 lg:order-1">
             <Card className="overflow-hidden card-glow hover:scale-105 transition-all duration-500 group">
               <CardContent className="p-0">
                 <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center relative overflow-hidden">
