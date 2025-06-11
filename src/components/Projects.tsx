@@ -47,7 +47,7 @@ const Projects = () => {
     },
     {
       title: "HR Employee Management System",
-      description: "A centralized HR platform for managing employees, attendance, appraisals etc with PayStack integration.",
+      description: "A centralized HR platform for managing employees, attendance, appraisals etc with Paystack integration.",
       technologies: ["React", "Tailwind CSS", "Django", "PostgreSQL"],
       image: HR,
       isPublic: false,
@@ -70,69 +70,69 @@ const Projects = () => {
       restrictedReason: "For internal use only - restricted access"
     },
     {
-      title: "Church Event We",
-      
-      technologies: ["React", "Tailwind CSS", "JavaScript", "Firebase"],
+      title: "Church Event Website",
+      description: "A church event management website for The Lord's Brethren Church featuring event registration.",
+      technologies: ["React", "JavaScript",  "Email JS", "Firebase"],
       image: TLBC24,
       isPublic: true,
       liveUrl: "https://tlbc.thelordsbrethrenchurch.org/",
       codeUrl: "https://github.com/CPeculiar/tlbcPortal"
     },
     {
-      title: "Company Website",
-      description: "A modern real estate platform connecting buyers, sellers, and agents with advanced search and listing features.",
-      technologies: ["Vue.js", "Laravel", "MySQL", "Redis"],
+      title: "CJ ART Company Website",
+      description: "A modern company website for showcasing services, team, and contact information with a sleek design.",
+      technologies: ["React", "JavaScript",  "Email JS", "Firebase"],
       image: CJART,
       isPublic: true,
       liveUrl: "https://cj-art.vercel.app/",
       codeUrl: "https://github.com/CPeculiar/CJ-ART"
     },
     {
-      title: "Church Application Website",
-      description: "A comprehensive LMS platform for educational institutions with course management, student tracking, and assessment tools.",
-      technologies: ["Angular", "Django", "PostgreSQL", "Docker"],
+      title: "TLBC Application Platform",
+      description: "An application platform for The Lord's Brethren Church, designed to manage applications for church programs.",
+      technologies: ["React", "JavaScript",  "Email JS", "Firebase"],
       image: APP,
       isPublic: false,
-      restrictedReason: "Educational institution proprietary system"
+       restrictedReason: "For internal use only - restricted access"
     },
     {
       title: "TLBC Data Management System",
       description: "An internal data management system for The Lord's Brethren Church, featuring member management, event scheduling, and resource allocation.",
-      technologies: ["React", "Spring Boot", "Oracle", "Microservices"],
+      technologies: ["React", "JavaScript",  "Email JS", "Firebase"],
       image: Data,
       isPublic: false,
-      restrictedReason: "HIPAA compliant - healthcare data protection"
+       restrictedReason: "For internal use only - restricted access"
     },
     {
       title: "TLBC Church Website",
-      description: "An advanced social media analytics platform providing insights, engagement metrics, and campaign performance tracking.",
-      technologies: ["React", "Python", "Apache Kafka", "ElasticSearch"],
+       description: "A modern church website for The Lord's Brethren Church, featuring service schedules, events, sermons, and contact information.",      
+      technologies: ["React", "JavaScript",  "Email JS", "Firebase"],
       image: TLBC,
       isPublic: true,
       liveUrl: "https://thelordsbrethrenchurch.org/",
       codeUrl: "https://github.com/CPeculiar/tlbc-website"
     },
     {
-      title: "Company Portal",
-      description: "A company portal for managing employee records, payroll, and performance reviews with secure access controls.",
+      title: "CJ ART Company's Portal",
+      description: "A consolidated portal for managing employee records, payroll, and performance reviews with secure access controls.",
       technologies: ["React", "WebSocket", "Redis", "Docker"],
       image: Portal,
       isPublic: false,
-      restrictedReason: "Financial services - regulatory compliance required"
+      restrictedReason: "Proprietary enterprise software"
     },
     {
-      title: "Media Agency Website",
-      description: "A media agency website showcasing services, portfolio, and client testimonials with a modern design.",
-      technologies: ["Angular", "ASP.NET Core", "SQL Server", "Azure"],
+      title: "Roadside Media Agency Website",
+      description: "Rodeside media agency website showcasing services, portfolio, contact information and client testimonials with a modern design.",
+      technologies: ["React", "JavaScript",  "Email JS", "Firebase"],
       image: Media,
       isPublic: true,
       liveUrl: "https://roadside-media-agency.vercel.app/",
       codeUrl: "https://github.com/CPeculiar/Roadside-Media-Agency"
     },
     {
-      title: "Tech Academy Platform",
-      description: "A tech academy platform offering courses, certifications, and community engagement for aspiring tech professionals.",
-      technologies: ["Vue.js", "Node.js", "MongoDB", "Stripe API"],
+      title: "Tech Academy Website",
+      description: "A tech academy website for FALATech Academy, featuring course information and listings, the academy’s profile, and an application form.",
+      technologies: ["React", "JavaScript",  "Email JS", "Firebase"],
       image: Tech,
       isPublic: true,
       liveUrl: "https://pef-tech-academy.vercel.app/",
@@ -140,8 +140,8 @@ const Projects = () => {
     },
     {
       title: "Wait-List Management System",
-      description: "A comprehensive event management platform with ticket sales, attendee management, and virtual event capabilities.",
-      technologies: ["React", "Django", "PostgreSQL", "AWS"],
+      description: "A comprehensive tech bootcamp management platform featuring course sales, payment management with Paystack integration, and virtual event capabilities.",
+      technologies: ["React", "JavaScript",  "Email JS", "Firebase"],
       image: WaitList,
       isPublic: false,
       restrictedReason: "Client proprietary event management solution"
