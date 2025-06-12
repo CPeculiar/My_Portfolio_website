@@ -28,8 +28,8 @@ const Skills = () => {
     {
       title: "Mobile Development",
       skills: [
-        "React Native", "Flutter", "Swift", "Kotlin", "Xamarin",
-        "Ionic", "Android SDK", "iOS SDK"
+        "React Native", "Flutter", 
+         "Android SDK", "iOS SDK"
       ],
       gradient: "from-pink-500/20 to-rose-500/20",
       border: "border-pink-500/30",
@@ -39,8 +39,8 @@ const Skills = () => {
     {
       title: "Database Management",
       skills: [
-        "PostgreSQL", "MongoDB", "MySQL", "Redis", "SQLite", 
-        "SQL", "NoSQL", "Firestore"
+        "PostgreSQL", "MongoDB", "MySQL", "Redis", 
+       "Firestore"
       ],
       gradient: "from-green-500/20 to-emerald-500/20",
       border: "border-green-500/30",
@@ -51,7 +51,7 @@ const Skills = () => {
       title: "DevOps & Cloud",
       skills: [
         "Docker", "Kubernetes", "AWS", "Azure",
-          "Jenkins","GitHub Actions", "Terraform"
+          "GitHub Actions"
       ],
       gradient: "from-slate-500/20 to-gray-500/20",
       border: "border-slate-500/30",
@@ -61,8 +61,8 @@ const Skills = () => {
     {
       title: "Tools & Technologies",
       skills: [
-        "Git", "GitHub", "GitLab", "Docker",  "Linux", "Vite", 
-         "Webpack", "Vercel", "Netlify"
+        "Git", "GitHub", "GitLab",  "Linux",
+       "Vercel", "Netlify"
       ],
       gradient: "from-orange-500/20 to-red-500/20",
       border: "border-orange-500/30",
@@ -72,8 +72,7 @@ const Skills = () => {
      {
       title: "Design & UI/UX",
       skills: [
-        "Figma", "Photoshop", "Illustrator",
-        "InVision", "Framer", "Canva"
+        "Figma", "Photoshop", "Canva"
       ],
       gradient: "from-fuchsia-500/20 to-pink-500/20",
       border: "border-fuchsia-500/30",
@@ -94,7 +93,7 @@ const Skills = () => {
       title: "Digital Marketing & Growth",
       skills: [
         "Digital Marketing", "Social Media Management", "Lead Generation", 
-         "Growth Hacking", "Brand Strategy", "Content Marketing"
+         "Growth Hacking", "Brand Strategy"
       ],
       gradient: "from-yellow-500/20 to-amber-500/20",
       border: "border-yellow-500/30",
@@ -105,8 +104,7 @@ const Skills = () => {
       title: "Business & Entrepreneurship",
       skills: [
         "Entrepreneurship", "Business Strategy", "Market Disruption",
-        "Innovation Leadership", "Business Development",
-        "Startup Operations"
+        "Innovation Leadership", "Business Development"
       ],
       gradient: "from-teal-500/20 to-cyan-500/20",
       border: "border-teal-500/30",
@@ -117,7 +115,7 @@ const Skills = () => {
       title: "Leadership & Communication",
       skills: [
         "Public Speaking", "Coaching & Mentoring", "Thought Leadership", 
-        "Community Building","Cross-functional Leadership"
+       "Cross-functional Leadership"
       ],
       gradient: "from-lime-500/20 to-green-500/20",
       border: "border-lime-500/30",
@@ -128,7 +126,7 @@ const Skills = () => {
       title: "Professional Services",
       skills: [
         "Virtual Assistant", "Executive Support", "Project Management",
-         "Process Optimization", "Remote Team Management", "Business Operations" 
+         "Process Optimization", "Business Operations" 
       ],
       gradient: "from-sky-500/20 to-blue-500/20",
       border: "border-sky-500/30",
@@ -139,7 +137,7 @@ const Skills = () => {
       title: "Personal & Artistic",
       skills: [
         "Spoken word artist", "Keyboardist", "Song writer",
-        "Creative Arts", "Musical Arrangement", "Live Performance"
+        "Creative Arts", "Musical Arrangement"
       ],
       gradient: "from-rose-500/20 to-pink-500/20",
       border: "border-rose-500/30",
@@ -147,10 +145,9 @@ const Skills = () => {
       textColor: "text-rose-200"
     },
     {
-      title: "Core Professional Skills",
+      title: "Professional Skills",
       skills: [
-        "Problem Solving", "Team Collaboration", 
-        "Strategic Communication", "Code Review", "Technical Mentoring"
+        "Problem Solving", "Team Collaboration", "Code Review", "Technical Mentoring"
       ],
       gradient: "from-emerald-500/20 to-teal-500/20",
       border: "border-emerald-500/30",

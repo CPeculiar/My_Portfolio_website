@@ -70,34 +70,30 @@ const About = () => {
           <div className="space-y-6 animate-fade-in delay-300 order-1 lg:order-2">
             <Card className="card-glow hover:scale-105 transition-all duration-500 bg-gradient-to-br from-background/80 to-background/60 backdrop-blur-sm">
               <CardContent className="p-4 sm:p-6 lg:p-8">
-                <h3 className="text-2xl sm:text-3xl font-semibold mb-4 sm:mb-6 gradient-text">Hello, I'm Peculiar!</h3>
+              <h3 className="text-2xl sm:text-3xl font-semibold mb-4 sm:mb-6 gradient-text">Hello, I'm Peculiar!</h3>
                 <div className="space-y-3 sm:space-y-4 text-muted-foreground">
                   <p className="leading-relaxed text-sm sm:text-base">
-                    I'm a passionate software developer with a strong foundation in modern web technologies. 
-                    My journey in programming began with a curiosity to understand how things work, and it has 
-                    evolved into a career dedicated to creating impactful solutions.
+                    I'm a multidisciplinary innovator who bridges the gap between technology, creativity, and business. 
+                    As a full-stack developer with expertise spanning from React and Python to mobile development 
+                    and cloud technologies, I bring technical excellence to every project.
                   </p>
                   <p className="leading-relaxed text-sm sm:text-base">
-                    I enjoy tackling complex challenges and transforming ideas into functional, user-friendly 
-                    applications. My approach combines technical expertise with creative problem-solving to 
-                    deliver results that exceed expectations.
+                    Beyond coding, I'm a creative force in design, content creation, and multimedia production. 
+                    My entrepreneurial spirit drives me to identify market opportunities and develop growth strategies 
+                    that disrupt traditional approaches. I combine strategic thinking with hands-on execution to 
+                    transform ideas into market-ready solutions.
                   </p>
-                  <p className="leading-relaxed text-sm sm:text-base">
+                    <p className="leading-relaxed text-sm sm:text-base">
                     When I'm not coding, you can find me exploring new technologies, contributing to open-source 
-                    projects, or sharing knowledge with the developer community.
+                    projects, mentoring developers or sharing knowledge with the developer community.
+                     I believe in the power of authentic communication and collaborative innovation.
+                  </p>
+                  <p className="leading-relaxed text-sm sm:text-base">
+                    My unique blend of technical expertise, creative vision and business acumen allows me to approach 
+                    challenges from multiple angles and deliver solutions that are both functionally robust and emotionally resonant.
                   </p>
                 </div>
 
-                <div className="mt-6 sm:mt-8">
-                  <Button
-                    onClick={handleDownloadCV}
-                    className="px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl w-full sm:w-auto"
-                    size="lg"
-                  >
-                    <Download className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                    Download CV
-                  </Button>
-                </div>
               </CardContent>
             </Card>
           </div>
